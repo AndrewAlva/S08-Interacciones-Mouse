@@ -7,7 +7,45 @@
     <title>01-demo. (Remapeo-Map)</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <section id="normal-data" class="data-wrapper">
+        <header class="data-header">
+          <h1>Normalized cursor (suavizado o lerp):</h1>
+        </header>
+        
+        <main class="coordinates-container">
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="normal-lerp-x">0</h2>
+            <h6 class="data-label">x</h6>
+          </aside>
+          
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="normal-lerp-y">0</h2>
+            <h6 class="data-label">y</h6>
+          </aside>
+        </main>
+      </section>
+      
+      <section id="rotation-data" class="data-wrapper">
+        <header class="data-header">
+          <h1>Rotation:</h1>
+        </header>
+        
+        <main class="coordinates-container">
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="rotation-x">0</h2>
+            <h6 class="data-label">x</h6>
+          </aside>
+          
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="rotation-y">0</h2>
+            <h6 class="data-label">y</h6>
+          </aside>
+        </main>
+      </section>
+    </div>
+
+    <canvas id="lienzo"></canvas>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
