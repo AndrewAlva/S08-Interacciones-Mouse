@@ -163,8 +163,9 @@ code {
   text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-sizing: border-box;
 }
 
@@ -293,4 +294,51 @@ code {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.data-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+  .data-header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    flex-grow: 0;
+    text-align: left;
+  }
+
+  .coordinates-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-shrink: 0;
+    background-color: rebeccapurple;
+  }
+
+    .axis-wrapper {
+      position: relative;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .data-wrapper .data-label {
+      font-size: 3em;
+      line-height: 1em;
+      margin: 0;
+    }
+
+.display-title{
+  font-size: 10em;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
 }
