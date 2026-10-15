@@ -308,17 +308,20 @@ code {
     position: relative;
     width: 100%;
     height: 100px;
+    padding: 0 2em;
+    box-sizing: border-box;
     flex-grow: 0;
     text-align: left;
   }
 
   .coordinates-container {
+    cursor: crosshair;
     position: relative;
     width: 100%;
     height: calc(100% - 100px);
     display: flex;
     flex-shrink: 0;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
   }
 
     .axis-wrapper {
@@ -328,6 +331,10 @@ code {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    .axis-wrapper:first-child {
+      border-right: 1px solid var(--border);
     }
 
     .data-wrapper .data-label {
@@ -341,4 +348,30 @@ code {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+}
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 75px;
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(0 0, 0 100%, 36% 76%, 60% 100%, 78% 90%, 52% 68%, 100% 68%);
+  }
+
+  &::before {
+    background-color: var(--text-h);
+  }
+
+  &::after {
+    inset: 5px 5px 5px 5px;
+    background-color: var(--accent);
+  }
 }
