@@ -7,7 +7,65 @@
     <title>02-starter. (Normalizacion)</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <section id="cursor-data" class="data-wrapper">
+        <header class="data-header">
+          <h1>Cursor (pointer) data:</h1>
+        </header>
+        
+        <main class="coordinates-container">
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="cursor-x">0</h2>
+            <h6 class="data-label">x</h6>
+          </aside>
+          
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="cursor-y">0</h2>
+            <h6 class="data-label">y</h6>
+          </aside>
+        </main>
+      </section>
+      
+      <section id="normal-data" class="superdata-wrapper">
+        <section class="data-wrapper">
+          <header class="data-header">
+            <h1>Normalized cursor:</h1>
+          </header>
+          
+          <main class="coordinates-container">
+            <aside class="axis-wrapper">
+              <h2 class="data-value display-title" id="normal-x">0</h2>
+              <h6 class="data-label">x</h6>
+            </aside>
+            
+            <aside class="axis-wrapper">
+              <h2 class="data-value display-title" id="normal-y">0</h2>
+              <h6 class="data-label">y</h6>
+            </aside>
+          </main>
+        </section>
+        
+        <section class="data-wrapper">
+          <header class="data-header">
+            <h1>Normalized cursor (suavizado o lerp):</h1>
+          </header>
+          
+          <main class="coordinates-container">
+            <aside class="axis-wrapper">
+              <h2 class="data-value display-title" id="normal-lerp-x">0</h2>
+              <h6 class="data-label">x</h6>
+            </aside>
+            
+            <aside class="axis-wrapper">
+              <h2 class="data-value display-title" id="normal-lerp-y">0</h2>
+              <h6 class="data-label">y</h6>
+            </aside>
+          </main>
+        </section>
+      </section>
+    </div>
+
+    <div id="cursor"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
