@@ -7,7 +7,46 @@
     <title>02-starter. (Mouse-Follow)</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <section id="cursor-data" class="data-wrapper">
+        <header class="data-header">
+          <h1>Cursor (pointer) data:</h1>
+        </header>
+        
+        <main class="coordinates-container">
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="cursor-x">0</h2>
+            <h6 class="data-label">x</h6>
+          </aside>
+          
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="cursor-y">0</h2>
+            <h6 class="data-label">y</h6>
+          </aside>
+        </main>
+      </section>
+      
+      <section id="target-data" class="data-wrapper">
+        <header class="data-header">
+          <h1>Target:</h1>
+        </header>
+        
+        <main class="coordinates-container">
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="target-x">0</h2>
+            <h6 class="data-label">x</h6>
+          </aside>
+          
+          <aside class="axis-wrapper">
+            <h2 class="data-value display-title" id="target-y">0</h2>
+            <h6 class="data-label">y</h6>
+          </aside>
+        </main>
+      </section>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="target"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
